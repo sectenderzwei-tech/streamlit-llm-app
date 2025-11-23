@@ -29,7 +29,7 @@ if st.button("実行"):
             SystemMessage(content=system_message),
             HumanMessage(content=input_message),
         ]
-        result = llm(messages)
+        result = llm.invoke(messages)
         st.write(f"{selected_item}AIの回答: **{result.content}**")
     else:
         st.error("質問内容を入力してから「実行」ボタンを押してください。")
